@@ -20,8 +20,8 @@ def calculate_indicator(data, indicator='RSI', length=14):
         data[indicator] = ta.sma(data['Close'], length=length)
     return data[indicator]
 
-# Function to plot the selected indicator with machine learning regression
-def plot_indicator_with_ml_regression(data, indicator, model='linear'):
+# Function to plot the selected indicator
+def plot_indicator(data, indicator, model='linear'):
     # Get the last 100 bars of the selected indicator
     history = data[indicator].tail(100).reset_index()
     history['index'] = history.index
@@ -60,4 +60,4 @@ if __name__ == "__main__":
     indicator_data = calculate_indicator(data, indicator=indicator)
 
     # Plot the indicator with support vector regression
-    plot_indicator_with_ml_regression(data, indicator, 'svr')
+    plot_indicator(data, indicator, 'linear')

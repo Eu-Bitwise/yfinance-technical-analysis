@@ -20,7 +20,7 @@ Open a terminal or command prompt and run the following command:
 ## Usage
 you can run it from a terminal or command prompt using the following command:
 
-`python yahoo_finance_tech_indicators.py`
+`python tech_indicators_yfinance.py`
 
 To use the script, you'll need to specify the symbol and indicator you want to plot.
 You can do this by modifying the following lines in the script:
